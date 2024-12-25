@@ -1,0 +1,18 @@
+<section class="hero-section">
+    <div *ngIf="introData">
+      <div class="text-content">
+        <h1>{{ introData.Title }}</h1>
+        <p>{{ introData.Description }}</p>
+      </div>
+      <div class="laptop-frame">
+        <iframe
+          [src]="introData.VideoUrl | safeUrl"
+          width="600"
+          height="400"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,11 @@
+<div *ngIf="introData"> <!-- التأكد من وجود البيانات قبل عرضها -->
+  <h1>{{ introData.Title }}</h1>
+  <p>{{ introData.Description }}</p>
+  <iframe
+    [src]="introData.VideoUrl | safeUrl"
+    width="600"
+    height="400"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
